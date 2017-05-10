@@ -36,8 +36,7 @@ class Controller extends BaseController
 
     public function homePosts() {
         $posts = Post::orderBy('rating', 'desc')->get();
-        $comments = Comment::all();
-        return view('welcome')->with(['posts' => $posts, 'comments' => $comments]);
+        return view('welcome')->with(['posts' => $posts]);
     }
 
     public function myblogPosts() {

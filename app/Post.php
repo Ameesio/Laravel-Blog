@@ -40,7 +40,7 @@ class Post extends Model
     }
 
     public function comments() {
-        return $this->hasMany('App\Comment');
+        return $this->hasMany('App\Comment', 'on_post', 'id');
     }
 
     public static function delete_userpost($postId) {
